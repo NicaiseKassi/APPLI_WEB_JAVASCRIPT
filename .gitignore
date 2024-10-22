@@ -1,0 +1,13 @@
+# Ignorer les dépendances Node.js
+/node_modules
+
+# Ignorer les fichiers de configuration
+.env
+
+# Ignorer les logs
+*.log
+
+# Ignorer le répertoire de build si tu en as un (par exemple, pour des projets React)
+build/
+dist/
+
