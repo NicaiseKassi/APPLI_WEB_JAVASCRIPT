@@ -1,0 +1,191 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Barre de navigation */
+/* Rendre la barre de navigation transparente */
+.navbar {
+    background-color: transparent; /* Enlève le fond */
+    color: #fff; /* Assure que le texte est blanc et visible */
+    padding: 15px;
+    position: fixed; /* Fixe la barre de navigation en haut de la page */
+    width: 100%; /* Prend toute la largeur */
+    z-index: 10; /* Assure que la barre est au-dessus de la vidéo */
+    top: 0;
+    left: 0;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .brand {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+/* Style des liens dans la barre de navigation */
+.menu a {
+    color: #fff; /* Les liens sont blancs pour contraster avec la vidéo */
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Effet de survol */
+    border-radius: 5px;
+}
+
+/* Vidéo avec taille normale */
+#background-video {
+    width: 100%;
+    height: auto;
+}
+
+.navbar .brand img {
+    height: 60px !important; /* Force la taille des logos */
+    width: auto; /* Maintient les proportions des logos */
+    vertical-align: middle;
+    margin-right: 10px; /* Espace entre les logos et le texte */
+}
+
+#logo1 {
+    height: 160px !important; /* Taille spécifique pour ce logo */
+    width: auto; /* Assure que les proportions sont conservées */
+}
+
+
+/* Bouton pour menu responsive */
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Style pour les petits écrans (responsive) */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* Ajuster le texte sur la vidéo */
+#changing-text {
+    color: white; /* Le texte est blanc et centré */
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 80px; /* Ajuste pour ne pas être caché par la barre */
+}
+
+/* Suppression du défilement */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Pas de défilement horizontal */
+    background-color: black; /* Fond noir derrière la vidéo */
+}
+
+a {
+    position: relative;
+    cursor: pointer;
+    color: #efefee;
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    transition: color 0.25s;
+} 
+
+a::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: white;
+    scale: 1 0;
+    z-index: -1;
+    transition: 0.45s;
+    border-radius: 10px;
+}
+
+a:hover {
+    color: black;
+}
+
+a:hover::after {
+    scale: 1 1; 
+}
+
+/* Style pour la section des services */
+.service-section {
+    padding: 60px 20px; /* Ajouter du padding autour de la section */
+    background-color: #f9f9f9; /* Fond léger pour la section */
+    text-align: center; /* Centrer le texte */
+}
+
+.service-container {
+    max-width: 1200px; /* Limiter la largeur de la section */
+    margin: 0 auto; /* Centrer la section */
+}
+
+.service {
+    display: flex; /* Disposer les images et le texte en ligne */
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+/* Style pour les images */
+.service-image {
+    width: 40%; /* Limiter la largeur de l'image à 40% du conteneur */
+    height: auto;
+    border-radius: 10px; /* Ajouter des coins arrondis */
+    margin-right: 20px; /* Espace entre l'image et le texte */
+}
+
+/* Texte à côté de l'image */
+.service-text {
+    width: 55%; /* Ajuster la largeur du texte */
+}
+
+
+.service h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.service p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}

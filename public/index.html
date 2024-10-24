@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Application Web</title>
+    
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Lien vers Google Fonts (facultatif) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <img src="images/Image2.png" alt="Mon Logo" style="height: 40px; vertical-align: middle;">
+                <img src="images/Capture6.png" alt="Logo " style="height: 40px; vertical-align: middle;">
+                <img src="images/Youmou.png" alt="Logo " style="height: 40px; vertical-align: middle;" id="logo1">
+            </a>
+            <div class="menu" id="navMenu">
+                <a href="#home" class="nav-link">Accueil</a>
+                <a href="#services Agrometeo" class="nav-link">Services Agrometeo</a>
+                <a href="#Assistance aux Projets" class="nav-link">Assistance aux Projets</a>
+                <a href="#contacts" class="nav-link">Contacts</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                ☰
+            </button>
+        </div>
+    </nav>    
+
+    <!-- Contenu principal -->
+    <section id="home" class="fullscreen-video">
+        <!-- Ajouter une vidéo -->
+        <video width="100%" height="auto" autoplay loop muted>
+            <source src="videos/Video.mp4" type="Video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+    </section>    
+
+    <!-- Nouvelle section pour la description des services -->
+<section id="services" class="service-section">
+    <div class="service-container">
+        <!-- Description du service Agrométéo -->
+        <div class="service">
+            <img src="images/Capture_d’écran.png" alt="Agrométéo" class="service-image">
+            <div class="service-text">
+            <h2>Service Agrométéo</h2>
+            <p>
+                Le service Agrométéo fournit des prévisions météorologiques précises et adaptées aux besoins des agriculteurs pour optimiser la gestion des cultures. 
+                Grâce à des données météorologiques en temps réel et des analyses agroclimatiques, nous aidons les producteurs à prendre des décisions éclairées pour améliorer les rendements.
+            </p>
+        </div>
+
+        <!-- Ajouter d'autres services -->
+        <div class="service">
+            <h2>Autres Services</h2>
+            <p>
+                En plus de l'Agrométéo, nous proposons divers services d'assistance pour les projets agricoles, y compris la gestion des données climatiques, 
+                l'aide à la planification des cultures et des conseils personnalisés pour une agriculture durable.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Section Contact (optionnelle) -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Contactez-nous pour plus d'informations.</p>
+</section>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
